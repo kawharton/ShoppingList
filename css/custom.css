@@ -1,0 +1,53 @@
+
+body {
+	background-color: #1C1D21;
+}
+
+.header {
+	background-color: #01A2A6;
+}
+
+.center {
+	background-color: #1C1D21;	
+}
+
+
+.input-group {
+	padding-top: 50px;
+}
+
+.groceries {
+	padding: 50px;
+}
+
+.list-group-item {
+	background-color: #01A2A6;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+}
+
+.jumbotron {
+	background: url(../groceries.jpg);
+	color: #fff; 
+	height: 400px;
+	width: 838px;
+	padding: 20px 60px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	padding-top: 50px;
+}
+
+.glyphicon-check{
+	display: none;
+}
+
+.glyphicon-remove{	
+	display: none;
+}
+
+
+
