@@ -1,16 +1,15 @@
 $(document).ready(function() {
+
 	//add item
-	$("#add-item").on("click", function() {
-		var text = $("#new-item");
-		var textValue = text.val();
+	$('#add-item').on('click', function() {
+		addItem();
+	}); 
 
-		if(textValue.trim().length === 0 )
-			alert("Please enter an item");
-		else
-			$('.list-group').append('<li class="list-group-item"><span class="glyphicon glyphicon-remove pull-left"></span>' + 
-			textValue + '<span class="glyphicon glyphicon-unchecked pull-right"></span><span class="glyphicon glyphicon-check pull-right"></span></li>'); 
-
-			text.val("");
+	$('#new-item').on('keypress', function(event) {
+		if (event.which===13) {
+			event.preventDefault();
+			addItem();
+		}
 	});
 
 	//remove item	
@@ -38,5 +37,27 @@ $(document).ready(function() {
 		$(this).hide();
     	$(this).parent().children('.glyphicon-unchecked').show();   
     	$(this).parent().css({'background-color': '#01A2A6'});
- 	});
+ });
+
+	function addItem() {
+		var text = $('#new-item');
+		var textValue = text.val();
+
+		if(textValue.trim().length === 0 ) {
+			alert("Please enter an item"); 
+		}
+		else {
+			$('.list-group').append('<li class="list-group-item"><span class="glyphicon glyphicon-remove pull-left"></span>' + 
+			textValue + '<span class="glyphicon glyphicon-unchecked pull-right"></span><span class="glyphicon glyphicon-check pull-right"></span></li>'); 
+			text.val("");
+		}
+	};
+
+
+
+
+
+
+
+
 });
